@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Фильмы{% endblock %}</title>
+    </head>
+    <body>
+        <nav>
+            <form action="{{ path('movie_index') }}" method="get">
+                <button type="submit">Список фильмов</button>
+            </form>
+            <form action="{{ path('movie_random') }}" method="get">
+                <button type="submit">Случайный фильм</button>
+            </form>
+        </nav>
+
+        {% block body %}{% endblock %}
+    </body>
+</html>
